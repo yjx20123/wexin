@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="photo">
+    <swiper autoplay>
+      <swiper-item>
+        <image src="https://picsum.photos/500/250?random=1" />
+      </swiper-item>
+      <swiper-item>
+        <image src="https://picsum.photos/500/250?random=2" />
+      </swiper-item>
+      <swiper-item>
+        <image src="https://picsum.photos/500/250?random=3" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="train">我的训练</view>
+  <view class="box">
+    <view>
+      <view class="box-item">
+        <view class="one_box">
+          <view class="item-left">累计训练</view>
+          <view class="item-right">今日训练：{{totalBow}}箭</view>
+        </view>
+      </view>
+      <view class="box-item">
+        <view class="second_box">
+          <view class="item-number">{{totalBow}}</view>
+          <view class="item-text">箭</view>
+        </view>
+      </view>
+      <view class="box-item">
+        <view class="third_box">
+          <view class="item">
+            <view>总环数</view>
+            <view><text>{{totalScore}}</text>环</view>
+          </view>
+          <view class="item">
+            <view>平均环数(环)</view>
+            <view><text>{{averageScore}}</text>环</view>
+          </view>
+          <view class="item">
+            <view>连续训练天数</view>
+            <view><text>1</text>天</view>
+          </view>
+        </view>
+      </view>
+      <view class="box-item">
+        <view class="four_box">
+          <view class="item_number" bindtap="numberTap">
+            <image src="/images/data.png" />
+            数据分析
+          </view>
+          <view class="item_train" bindtap="gotap">
+            <image src="/images/play.png"></image>
+            前往训练
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

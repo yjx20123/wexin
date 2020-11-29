@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#bbded6",
+  "navigationBarTitleText": "训练设置",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-icon": "@vant/weapp/icon/index",
+  "van-picker": "@vant/weapp/picker/index"
+  }
+}

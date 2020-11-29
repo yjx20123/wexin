@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="category-item personal-info">
+        <view class="user-avatar">
+            <image src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="user-name">
+            <view class="user-nickname">
+                <text>{{userInfo.nickName}}</text>
+            </view>
+            <view class="user-locaiton">
+                <text>所在地：{{userInfo.province}}</text>
+            </view>
+        </view>
+    </view>
+
+    <!--缓存面板-->
+    <view class="category-item">
+        <block wx:for="{{cache}}">
+            <view class="detail-item" catch:tap="{{item.tap}}">
+                <image src="{{item.iconurl}}" />
+                <text>{{item.title}}</text>
+                <view class="detail-item-btn"></view>
+            </view>
+        </block>
+    </view>
+    <!-- 设备面板 -->
+    <view class="category-item">
+        <block wx:for="{{device}}">
+            <view class="detail-item" catch:tap="{{item.tap}}">
+                <image src="{{item. iconurl}}"></image>
+                <text>{{item.title}}</text>
+                <view class="detail-item-btn"></view>
+            </view>
+        </block>
+    </view>
+   
+</view>

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/bow/bow",
+    "pages/index/history/history",
+    "pages/setting/setting",
+    "pages/index/bow/picture/picture"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#bbded6",
+    "navigationBarTitleText": "射箭那些事",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fff7f7",
+    "backgroundColor": "#bbded6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "射箭",
+        "iconPath": "/images/射箭.png",
+        "selectedIconPath": "/images/射箭_.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me_.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap75.json"
+}

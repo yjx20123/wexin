@@ -1,0 +1,72 @@
+/* pages/bow/bow.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff7f7;
+}
+.arrow{
+  font-size: 30rpx;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+.bowarrow{
+  padding-bottom:30rpx;
+  border-bottom: 5rpx solid #bbded6;
+}
+.bow{
+  display: flex;
+  justify-content: space-around;
+}
+.bow-item{
+  padding: 10rpx 20rpx;
+  background-color: #bbded6;
+  border-radius: 10rpx;
+  
+}
+.distance{
+  font-size: 30rpx;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+.Meters-item{
+  padding: 10rpx 20rpx;
+  background-color: #bbded6;
+  border-radius: 10rpx;
+}
+/*组数箭数*/
+.arrowgroups{
+  font-size: 30rpx;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+.address{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-item{
+  width: 130rpx;
+  margin: 20rpx 30rpx;
+  padding: 30rpx 30rpx;
+  background-color: #bbded6;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.tumble{
+  width: 100%;
+  height: 44vh;
+}
+.play{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 10vh;
+}
+.playTrain{
+  background-color: #bbded6 !important;
+  color: #000000 !important;
+
+}
+.play-hover{
+background-color: #8ac6d1 !important;
+color: #fff7f7 !important;
+}

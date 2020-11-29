@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="bow">
+    <view class="bow-item">
+      <view class="bow-item-item">当前弓种</view>
+      <view class="bow-item-item">{{checkedBow.name}}</view>
+    </view>
+    <view class="Meters">
+      <view class="meters-item">当前距离</view>
+      <view class="meters-item">{{checkedMeters.name}}</view>
+    </view>
+  </view>
+  <view class="group">
+    <view class="arrow">
+      <view class="arrow-item">本轮总箭数</view>
+      <view class="arrow-item">{{checkGroup.column*checkGroup.row}}箭</view>
+    </view>
+    <view class="number">
+      <view class="number-item">本轮总环数</view>
+      <view class="number-item">{{sum}}环</view>
+    </view>
+  </view>
+  <scroll-view class="groupScroll" scroll-y="true">
+    <view class="layui">
+      <view class="column" wx:for="{{checkGroup.row}}">
+        <view>
+          <view class="row" wx:for="{{checkGroup.column}}">
+            
+            <input class="inputcss" type="number" data-id="{{}}" maxlength="2" bindblur="numberBlur"  bindinput="numberinput" bindfocus="numberfocus" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="oktrain">
+    <button class="finsh" hover-class="finsh-hover" bindtap="baoTap">保存记录</button>
+  </view>
+</view>

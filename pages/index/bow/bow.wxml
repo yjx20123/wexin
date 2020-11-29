@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="bowarrow">
+    <view class="arrow">弓种 </view>
+    <view class="bow">
+      <view wx:for="{{bow.item}}" bind:tap="bowChecked" data-id="{{item.id}}">
+        <view class="bow-item" style="{{item.id==bow.checkedId?'background-color:#8ac6d1;':''}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="bowarrow">
+    <view class="distance">距离 </view>
+    <view class="bow">
+      <view wx:for="{{Meters.item}}" bindtap="meterChecked" data-id="{{item.id}}">
+        <view class="Meters-item" style="{{item.id==Meters.msChecked?'background-color:#8ac6d1;':''}}">{{item.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="groups">
+    <view class="arrowgroups">组数箭数</view>
+    <scroll-view class="tumble" scroll-y="true">
+      <view class="address">
+        <view class="add-item" wx:for="{{groups.item}}" wx:key="index" bindtap="groupsChecked" data-id="{{item.id}}"
+          style="{{item.id==groups.groupChecked?'background-color:#8ac6d1;':''}}">
+          <view class="arrow-item">{{item.column}}组{{item.row}}箭 </view>
+        </view>
+        <view class="add-item" bindtap="showPopup">添加+</view>
+      </view>
+    </scroll-view>
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" lock-scroll="false" bind:close="onClose">
+      <van-picker show-toolbar title="选择组数箭数" columns="{{ columns }}" bind:change="pickerChange" bind:cancel="onCancel"
+        bind:confirm="onConfirm" />
+    </van-popup>
+    <view class="play">
+      <button class="playTrain" bindtap="playTrain" type="warn" hover-class="play-hover">开始训练</button>
+    </view>
+  </view>
+
+</view>
