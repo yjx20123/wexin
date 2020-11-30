@@ -150,8 +150,8 @@ Page({
       console.log(this.data.checkedBow);
       
       var history = {
-        bow: this.data.checkedBow,
-        Meters: this.data.checkedMeters,
+        bow: this.data.checkedBow.name,
+        Meters: this.data.checkedMeters.name,
         sum: this.data.sum,
         arrow: this.data.checkGroup.column * this.data.checkGroup.row,
         average: (this.data.sum /(this.data.checkGroup.column * this.data.checkGroup.row )).toFixed(2)

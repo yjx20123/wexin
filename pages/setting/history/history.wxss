@@ -1,6 +1,37 @@
-/* pages/setting/history/history.wxss */
-.container{
+.container {
+  background-color: #efeff4;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.category-item {
+  background-color: white;
+  width: 100%;
+  margin: 10rpx 0;
+  border-top: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+  border-color: #fff;
+
+}
+
+.detail-item_one{
+  display: flex;
+  margin-left: 20rpx;
+  border-bottom: 1px solid rgba(217, 217, 217, .4);
+  height: 85rpx;
+  align-items: center;
+}
+.detail-item_two{
+  display: flex;
+  height: 120rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.detail-item_one text{
+  font-size: 50rpx;
+  color:#f6003c;
 }

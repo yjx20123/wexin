@@ -1,8 +1,15 @@
 <view class="container">
-  <scroll-view scroll-y="">
-    <view class="Overall"></view>
-  </scroll-view>
-</view>
-<view wx:for="{{history.item}}">
-  <view>{{item.bow}}</view>
+  <view class="category-item" wx:for="{{history}}">
+    <view class="detail-item">
+      <view class="detail-item_one">
+        <view>分数：<text>{{item.sum}}</text>环</view>
+      </view>
+      <view class="detail-item_two">
+        <view>弓种：{{item.bow}}</view>
+        <view>距离：{{item.Meters}}</view>
+        <view>箭支：{{item.arrow}}箭</view>
+        <view>平均：{{item.average}}环</view>
+      </view>
+    </view>
+  </view>
 </view>
