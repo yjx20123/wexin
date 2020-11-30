@@ -25,7 +25,7 @@
         <view>
           <view class="row" wx:for="{{checkGroup.column}}">
             
-            <input class="inputcss" type="number" data-id="{{}}" maxlength="2" bindblur="numberBlur"  bindinput="numberinput" bindfocus="numberfocus" />
+            <input class="inputcss" type="number"  maxlength="2" bindblur="numberBlur"  bindinput="numberinput" bindfocus="numberfocus" />
           </view>
         </view>
       </view>

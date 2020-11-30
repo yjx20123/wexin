@@ -1,5 +1,5 @@
 /*弓种*/
-var bows = {   
+var bows = {
   checkedId: 1,
   item: [{
       id: 1,
@@ -24,12 +24,12 @@ var bows = {
   ]
 }
 
-var bowChecked = function (id) {  
+var bowChecked = function (id) {
   bows.checkedId = id
 }
 
-/*距离定义*/ 
-var Meters = {    
+/*距离定义*/
+var Meters = {
   msChecked: 1,
   item: [{
       id: 1,
@@ -60,48 +60,74 @@ var metersChecked = function (id) {
 var groups = {
   groupChecked: 1,
   item: [{
-    id:1,
+    id: 1,
     column: 3,
     row: 4
   }, {
-    id:2,
+    id: 2,
     column: 6,
     row: 6
-  },{
-    id:3,
+  }, {
+    id: 3,
     column: 12,
     row: 12
   }]
- 
+
 }
-var history={
-  historyChecked:1,
-  item:[]
+var history = {
+  historyChecked: 1,
+  item: [{
+    bow: '传统',
+    Meters: '30米',
+    sum: 50,
+    arrow: 12,
+    average: 4.17
+  },
+  {
+    bow: '传统',
+    Meters: '30米',
+    sum: 120,
+    arrow: 24,
+    average: 5
+  },
+  {
+    bow: '传统',
+    Meters: '30米',
+    sum: 120,
+    arrow: 12,
+    average: 10
+  },
+  {
+    bow: '传统',
+    Meters: '30米',
+    sum: 50,
+    arrow: 12,
+    average: 4.17
+  }]
 }
-var groupsChecked=function(id){
-  groups.groupChecked=id
+var groupsChecked = function (id) {
+  groups.groupChecked = id
 }
-var groupsFunction = function(group){
-  group.id = groups.item.length+1
+var groupsFunction = function (group) {
+  group.id = groups.item.length + 1
   groups.item.push(group)
   // console.log(groups);
 }
-var historyFunction=function(item){
+var historyFunction = function (item) {
   history.item.push(item)
-  
+
   console.log(history);
-  
+
 }
 
 /*添加组数箭数 */
-var arrows={
-  column:[
-    {
-      values:[1,2,3,4,5,6,7,8,9,10,11,12],
+var arrows = {
+  column: [{
+      values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       defaultIndex: 2
     },
     {
-      values:[1,2,3,4,5,6,7,8,9,10,11,12],
+      values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       defaultIndex: 1
     }
   ]
@@ -115,9 +141,9 @@ module.exports = {
   Meters: Meters,
   metersChecked: metersChecked,
   groups: groups,
-  groupsChecked:groupsChecked,
-  groupsFunction:groupsFunction,
-  arrows:arrows,
-  historyFunction:historyFunction,
-  history:history
+  groupsChecked: groupsChecked,
+  groupsFunction: groupsFunction,
+  arrows: arrows,
+  historyFunction: historyFunction,
+  history: history
 }

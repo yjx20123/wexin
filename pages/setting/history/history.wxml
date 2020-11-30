@@ -1,0 +1,8 @@
+<!-- <view class="container">
+  <scroll-view scroll-y="">
+    <view class="Overall"></view>
+  </scroll-view>
+</view> -->
+<view wx:for="{{history.item}}">
+  <view>{{item.bow}}</view>
+</view>

@@ -3,14 +3,21 @@
     "pages/index/index",
     "pages/index/bow/bow",
     "pages/index/history/history",
+    "pages/index/bow/picture/picture",
     "pages/setting/setting",
-    "pages/index/bow/picture/picture"
+    "pages/setting/device/device",
+    "pages/setting/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#bbded6",
     "navigationBarTitleText": "射箭那些事",
     "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我想看看你的位置可以吗（*゜ー゜*）"
+    }
   },
   "tabBar": {
     "selectedColor": "#fff7f7",

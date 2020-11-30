@@ -1,6 +1,6 @@
 // pages/setting/setting.js
 
-var app = getApp();
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -14,7 +14,16 @@ Page({
        iconurl:'/images/huancun.png',
        title:'缓存清理',
        tap:'clearCache'
-    }],
+    },{
+      iconurl:'/images/history.png',
+      title:'历史记录',
+      tap:'history'
+   },
+   {
+    iconurl:'/images/notebook.png',
+    title:'训练笔记',
+    tap:'notebook'
+ }],
     device: [{
       iconurl: '/images/picture.png',
       title: '系统信息',
@@ -32,13 +41,13 @@ Page({
     },
     
     {
-      iconurl: '/images/位置.png',
+      iconurl: '/images/map_1.png',
       title: '当前位置、速度',
       tap: 'showLonLat'
     },
     
     {
-      iconurl: '/images/扫一扫.png',
+      iconurl: '/images/Ewm.png',
       title: '二维码',
       tap: 'scanQRCode'
     },
@@ -46,14 +55,20 @@ Page({
   
   },
 
+  history:function(){
+  wx.navigateTo({
+    url: 'history/history',
+  })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true                  
+        hasUserInfo: true
       })
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -67,6 +82,7 @@ Page({
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
+        lang:"zh_CN",
         success: res => {
           app.globalData.userInfo = res.userInfo
           this.setData({
@@ -77,7 +93,15 @@ Page({
       })
     }
   },
-  
+  getUserInfo: function(e) {
+    lang:"zh_CN",
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  },
   showModal:function(title,content,callback){
 wx.showModal({
   title:title,
@@ -135,9 +159,12 @@ wx.showModal({
     wx.getLocation({
       type:'gcj02',
       success:function(res){
+        console.log(res);
+        
         callback(res.longitude,res.latitude,res.speed);
       }
     })
+    
   },
 //显示当前位置坐标
 showLonLat:function(){

@@ -49,6 +49,8 @@ Page({
 
   //获取焦点事件
   numberfocus(e) {
+    
+    
     //是否第一次输入
     if (e.detail.value == "") {
       this.setData({
@@ -63,7 +65,7 @@ Page({
     })
 
     //我是获取焦点
-    console.log("我是获取焦点触发的" + this.data.input);
+    //console.log("我是获取焦点触发的" + this.data.input);
 
 
   },
@@ -118,6 +120,22 @@ Page({
     console.log(this.data.nums);
 
   },
+  /*判断输入数值是否大于十 */
+  numberinput:function(e){
+      var value=e.detail.value
+   if(value>10){
+     wx.showToast({
+       title: '已超10，重新输',
+       icon:"none"
+     })
+     this.setData({
+       value:0
+     })
+   }else{
+     value:value
+   }
+   
+  },
   /*保存记录 */
   baoTap: function () {
     let num = 0
@@ -136,7 +154,7 @@ Page({
         Meters: this.data.checkedMeters,
         sum: this.data.sum,
         arrow: this.data.checkGroup.column * this.data.checkGroup.row,
-        average: this.data.sum /(this.data.checkGroup.column * this.data.checkGroup.row )
+        average: (this.data.sum /(this.data.checkGroup.column * this.data.checkGroup.row )).toFixed(2)
       }
       db.historyFunction(history);
 

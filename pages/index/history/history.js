@@ -11,18 +11,29 @@ function initChart(canvas, width, height, dpr) {
   });
   canvas.setChart(chart);
 
+  var source =  [
+    ['product', '总箭数', '总环数', '平均环数']
+  ]
+
+  var history = db.history
+
+  for(var i =0; i<db.history.item.length; i++){
+    source.push([
+      '第'+(i+1)+'组',
+      history.item[i].arrow,
+      history.item[i].sum,
+      history.item[i].average
+    ])
+  }
+
+  console.log(source);
+  
  
    var option = {
       legend: {},
       tooltip: {},
       dataset: {
-        source: [
-          ['product', '2015', '2016', '2017'],
-          ['Matcha Latte', 43.3, 85.8, 93.7],
-          ['Milk Tea', 83.1, 73.4, 55.1],
-          ['Cheese Cocoa', 86.4, 65.2, 82.5],
-          ['Walnut Brownie', 72.4, 53.9, 39.1]
-        ]
+        source:source
       },
       xAxis: {
         type: 'category'

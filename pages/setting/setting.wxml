@@ -1,5 +1,6 @@
 <view class="container">
-    <view class="category-item personal-info">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN"> 点击登录 </button>
+    <view class="category-item personal-info" wx:else>
         <view class="user-avatar">
             <image src="{{userInfo.avatarUrl}}" />
         </view>
@@ -8,9 +9,10 @@
                 <text>{{userInfo.nickName}}</text>
             </view>
             <view class="user-locaiton">
-                <text>所在地：{{userInfo.province}}</text>
+                <text>所在地：{{userInfo.country}}</text>
             </view>
         </view>
+        
     </view>
 
     <!--缓存面板-->
@@ -33,5 +35,5 @@
             </view>
         </block>
     </view>
-   
+    
 </view>

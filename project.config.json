@@ -80,6 +80,12 @@
         {
           "name": "pages/index/bow/picture/picture",
           "pathName": "pages/index/bow/picture/picture",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setting/history/history",
+          "pathName": "pages/setting/history/history",
           "scene": null
         }
       ]
